@@ -6,6 +6,11 @@ public class StockAccountManagementMain {
 
 	public static void main(String[] args) {
 		
-		LinkedList<Stock> stocksList = StockPortfolio.addStocks();
+		System.out.println("----------Welcome To Stock Account Management----------");
+		StockPortfolioIF stockPortfolio = new StockPortfolioImpl();
+		System.out.println();
+		LinkedList<Stock> myStock = StockPortfolio.addStocks();
+		stockPortfolio.calculateValue(myStock);
+		System.out.println("-------------------------------------------------------");
 	}
 }
