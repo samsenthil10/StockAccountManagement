@@ -3,10 +3,10 @@ package com.bridgelabz.stockaccountmanagement;
 import com.bridgelabz.datastructures.LinkedList;
 import com.bridgelabz.datastructures.Node;
 
-public class StockPortfolioImpl implements StockPortfolioIF {
+public class StockAccountImpl implements StockAccountIF {
 
 	@Override
-	public void calculateValue(LinkedList<Stock> myStock) {
+	public double valueOf(LinkedList<Stock> myStock) {
 		
 		double total=0.0;
 		Node<Stock> tempNode = (Node<Stock>) myStock.head;
@@ -19,6 +19,6 @@ public class StockPortfolioImpl implements StockPortfolioIF {
 			tempNode = (Node<Stock>) tempNode.getNext();
 		}
 		System.out.println();
-		System.out.println("Total Stock value is: " + total);
+		return total;
 	}
 }

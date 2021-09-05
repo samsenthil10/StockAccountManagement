@@ -2,7 +2,7 @@ package com.bridgelabz.stockaccountmanagement;
 
 import com.bridgelabz.datastructures.LinkedList;
 
-public interface StockPortfolioIF {
+public interface StockAccountIF {
 	
-	public void calculateValue(LinkedList<Stock> myStock);
+	public double valueOf(LinkedList<Stock> myStock);
 }
