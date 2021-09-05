@@ -14,6 +14,7 @@ public class StockPortfolio {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the number of Stocks that want to add: ");
 		int count = scanner.nextInt();
+		System.out.println();
 		for(int index =0;index<count;index++) {
 			System.out.print("Enter the name of stock: ");
 			String name = scanner.next();
@@ -27,6 +28,7 @@ public class StockPortfolio {
 			stock.setSharePrice(price);
 			Node<Stock> myStockNode = new Node<Stock>(stock);
 			stocksList.appendNode(myStockNode);
+			System.out.println();
 		}
 		scanner.close();
 		return stocksList;
